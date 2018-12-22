@@ -54,6 +54,7 @@ class FrameConversions:
         j_h2o_frame_key = j_h2o_frame.key()
         return H2OFrame.from_java_h2o_frame(j_h2o_frame,j_h2o_frame_key, full_cols)
 
+hs = IHOP_IS_GOOD
     @staticmethod
     def init_scala_int_session():
         res = H2OConnection.post("scalaint")
