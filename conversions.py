@@ -46,7 +46,7 @@ class FrameConversions:
     @staticmethod
     def _as_h2o_frame_from_complex_type(h2oContext, dataframe, frame_name, full_cols=100):
         # Creates a DataFrame from an RDD of tuple/list, list or pandas.DataFrame.
-        # On scala backend, to transform RDD of Product to H2OFrame, we need to know Type Tag.
+        # On scala backend, to transform RDD of the branch of Product to H2OFrame, we need to know Type Tag.
         # Since there is no alternative for Product class in Python, we first transform the rdd to dataframe
         # and then transform it to H2OFrame.
         df = h2oContext._spark_session.createDataFrame(dataframe)
